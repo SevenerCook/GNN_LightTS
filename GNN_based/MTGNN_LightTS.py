@@ -12,7 +12,7 @@ class Model(nn.Module):
     def __init__(self, args):
         super(Model, self).__init__()
         self.graphLayer = net.Model2(args)
-        self.attentionlayer = LightTS.Model(args)
+        self.MLPlayer = LightTS.Model(args)
         self.feature_extracter = CNN.Basic1DCNN
 
     def forward(self,input, x_mark_enc, x_dec, x_mark_dec,
@@ -21,5 +21,5 @@ class Model(nn.Module):
 
         """
         output1 = self.graphLayer(input, x_mark_enc, x_dec, x_mark_dec)
-        output2 = self.attentionlayer(output1, x_mark_enc, x_dec, x_mark_dec)
+        output2 = self.MLPlayer(output1, x_mark_enc, x_dec, x_mark_dec)
         return output2
