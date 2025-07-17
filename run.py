@@ -25,7 +25,7 @@ parser = argparse.ArgumentParser(description='Autoformer & Transformer family fo
 # basic config
 parser.add_argument('--is_training', type=int, default=1, help='status')
 parser.add_argument('--model_id', type=str, default='test_site1', help='model id')
-parser.add_argument('--model', type=str, default='MTGNN_Autoformer',
+parser.add_argument('--model', type=str, default='MTGNN_LightTS',
                     help='model name, options: [Autoformer, Informer, Transformer,MTGNN,Autoformer_1,MTGNN_LightTS,GraphWavenet]')
 parser.add_argument('--task_name', type=str, default='long_term_forecast', help='model id')
 # data loader
